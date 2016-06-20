@@ -21,7 +21,7 @@ import com.tencent.mm.sdk.openapi.WXTextObject;
 
 public class MainActivity extends Activity implements OnClickListener{
 	// IWXAPI：第三方APP和微信通信的接口
-	private IWXAPI api;
+    public static IWXAPI api;
 	// 文本分享按钮
 	private Button shareTxTButton;
 	
@@ -29,6 +29,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+        setTitle("简单文本分享");
 		// 初始化
 		api = WXAPIFactory.createWXAPI(this, Constants.APP_ID, true);
 		// 向微信终端注册你的id
